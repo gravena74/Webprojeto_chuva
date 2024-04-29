@@ -17,6 +17,8 @@ $background-color_6: rgba(207, 205, 202, 0.767);
 /* footer */
 /* FORMS CRIA */
 /* FORMS ENVIADO */
+/* secção de comentarios */
+/* MEDIA */
 * {
 	margin: 0;
 	padding: 0;
@@ -31,6 +33,7 @@ nav {
 	top: 0;
 	border-right: 2px solid #E7E7E7;
 	height: 100%;
+	z-index: 1000;
 	h1 {
 		background: linear-gradient(0deg, #EE7A3A, #FFB354);
 		color: $color_1;
@@ -225,6 +228,7 @@ section {
 	}
 }
 .discussoes {
+	padding: 1%;
 	border: 1px solid #E7E7E7;
 	border-radius: 5px;
 	width: 100%;
@@ -334,8 +338,9 @@ footer {
 			font-weight: bold;
 			padding: 1% 0 0 1%;
 		}
-		p {
+		.p_content {
 			border: 1px solid #E7E7E7;
+			width: 100%;
 			text-align: start;
 			padding: 1%;
 			margin: 0 1%;
@@ -396,5 +401,51 @@ footer {
 		width: 80%;
 		padding: 2%;
 		background-color: $background-color_6;
+	}
+}
+.comentarios {
+	display: none;
+	div {
+		padding: 1%;
+	}
+	.nome {
+		font-weight: bold;
+	}
+	.autor {
+		color: $color_3;
+		font-weight: bold;
+	}
+	.info_comentarios {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		div {
+			display: flex;
+			gap: 15px;
+		}
+	}
+}
+.resposta_carlos {
+	border: 1px solid #CCCCCC;
+	margin: 0 1%;
+}
+.resposta {
+	background-color: $background-color_5;
+	margin: 0 1%;
+	border: 1px solid #CCCCCC;
+}
+@media only screen and (max-width: 1630px) {
+	main {
+		padding: 0 0 0 2%;
+	}
+}
+@media only screen and (max-width: 1470px) {
+	main {
+		padding: 0 0 0 5%;
+	}
+}
+@media only screen and (max-width: 1320px) {
+	main {
+		padding: 0 0 0 7%;
 	}
 }

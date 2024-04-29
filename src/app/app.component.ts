@@ -21,6 +21,12 @@ export class AppComponent implements OnInit {
     const botao_envia = document.querySelector('.botao_envia') as HTMLElement;
     const forms_enviado = document.querySelector('.forms_enviado') as HTMLElement;
 
+    const botaoCriacaoNovo = document.querySelector('.botaoCriacaoNovo') as HTMLElement;
+
+    const topicoPronto2 = document.querySelector('#topicoPronto2') as HTMLElement;
+    const comentarios = document.querySelector('.comentarios') as HTMLElement;
+
+    let verifica: boolean = false;
     let expandido: boolean = false;
 
     botaoExpandir.addEventListener('click', () => {
@@ -59,6 +65,25 @@ export class AppComponent implements OnInit {
     botao_envia.addEventListener('click', () => {
       forms_cria.style.display = "none";
       forms_enviado.style.display = "block";
+    });
+
+    botaoCriacaoNovo.addEventListener('click', () => {
+      forms_cria.style.display = "block";
+      forms_enviado.style.display = "none";
+    });
+
+    topicoPronto2.addEventListener('click', () => {
+      if (verifica) {
+        comentarios.style.display = "none";
+        verifica = false;
+      } else {
+        comentarios.style.display = "block";
+        verifica = true;
+      }
+    });
+
+    comentarios.addEventListener('click', ()=>{
+      comentarios.style.display = "none"
     });
   }
 }
